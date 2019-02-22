@@ -1,17 +1,17 @@
 <template lang="html">
-  <div class="component-{{#name}}">
-    {{#name}}
+  <div class="component-{{name}}">
+    {{name}}
   </div>
 </template>
 
 <script>
 export default {
-  name: "{{#name}}"
+  name: "{{name}}"
 }
 </script>
 
-<style lang="css">
-.{{#name}} {
-  
-}
+<style{{#sass}} lang="scss"{{/sass}}>
+  .component-{{name}} {
+    
+  }
 </style>
