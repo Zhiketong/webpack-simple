@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Com from '../components/index.vue'
+import Com from './components/index.vue'
 export default {
   name: 'app',
   components: {
