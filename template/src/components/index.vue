@@ -1,12 +1,12 @@
 <template lang="html">
-  <div class="component-{{#}}">
-    {{#}}
+  <div class="component-{{#name}}">
+    {{#name}}
   </div>
 </template>
 
 <script>
 export default {
-  name: "{{#}}"
+  name: "{{#name}}"
 }
 </script>
 
