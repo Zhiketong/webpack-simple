@@ -19,5 +19,5 @@ export default {
 }
 </script>
 
-<style>
+<style{{#less}} lang="less"{{/less}}>
 </style>
