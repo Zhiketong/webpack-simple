@@ -4,6 +4,11 @@
     "stage-3"
   ],
   "plugins": [
-    "transform-runtime"
+    ["transform-runtime", {
+      "regenerator": false,
+      "corejs": true,
+      "helpers": true,
+      "useESModules": true
+    }]
   ]
 }
