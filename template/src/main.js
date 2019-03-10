@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css'
+{{#mock}}
+import './mocks'
+{{/mock}}
 
 Vue.use(VueResource)
 Vue.http.options.root = '//web-api-gateway.yin126.com'

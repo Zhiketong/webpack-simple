@@ -37,6 +37,9 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     {{/less}}
+    {{#mock}}
+    "mockjs": "^1.0.1-beta3",
+    {{/mock}}    
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

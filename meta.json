@@ -24,7 +24,15 @@
        "type": "confirm",
        "message": "Use less?",
        "default": false
+    },
+    "mock": {
+      "type": "confirm",
+      "message": "Use mockjs?",
+      "default": false
     }
+  },
+  "filters": {
+    "src/mock/**/*": "mock"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
