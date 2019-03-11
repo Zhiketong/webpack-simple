@@ -7,7 +7,7 @@ import './mocks'
 {{/mock}}
 
 Vue.use(VueResource)
-Vue.http.options.root = '//web-api-gateway.yin126.com'
+Vue.http.options.root = '//gateway.com'
 Vue.http.options.crossOrigin = true
 Vue.http.options.xhr = {withCredentials: true}
 Vue.http.headers.common.Authorization = localStorage.token

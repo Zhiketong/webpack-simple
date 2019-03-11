@@ -1,6 +1,6 @@
 import Mock from 'mockjs'
 
-const GATEWAY = 'http://web-api-gateway.yin126.com'
+const GATEWAY = 'gateway.com'
 
 Mock.mock(`${GATEWAY}/mocks/test`, {
   'user|1-3': [
