@@ -17,45 +17,29 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader'
-        ],
-      },{{#sass}}
+        ]
+      },{{#less}}
       {
-        test: /\.scss$/,
+        test: /\.less$/,
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader'
+          'less-loader'
         ],
       },
-      {
-        test: /\.sass$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader?indentedSyntax'
-        ],
-      },
-      {{/sass}}
+      {{/less}}
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
           loaders: {
-            {{#sass}}
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            'scss': [
+            {{#less}}
+            'less': [
               'vue-style-loader',
               'css-loader',
-              'sass-loader'
-            ],
-            'sass': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax'
+              'less-loader'
             ]
-            {{/sass}}
+            {{/less}}
           }
           // other vue-loader options go here
         }
@@ -76,7 +60,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': resolve('src')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

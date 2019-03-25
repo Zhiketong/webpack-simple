@@ -10,8 +10,5 @@ export default {
 }
 </script>
 
-<style{{#sass}} lang="scss"{{/sass}}>
-  .component-{{name}} {
-    
-  }
+<style{{#less}} lang="less"{{/less}}>
 </style>
