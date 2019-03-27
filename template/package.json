@@ -12,7 +12,7 @@
     "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test:watch": "cross-env BABEL_ENV=test karma start test/karma.conf.js --auto-watch",
     "preversion": "git checkout master && git pull && npm run build ",
-    "postversion": "npm publish && git push && git push --tags "
+    "postversion": "git push && git push --tags "
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
