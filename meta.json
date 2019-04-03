@@ -25,6 +25,11 @@
        "message": "Use less?",
        "default": false
     },
+    "vuex": {
+      "type": "confirm",
+      "message": "Use vuex?",
+      "default": false
+    },
     "mock": {
       "type": "confirm",
       "message": "Use mockjs?",
