@@ -1,7 +1,9 @@
+import VueResource from 'vue-resource'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import App from '@/App'
 
 const localVue = createLocalVue()
+localVue.use(VueResource)
 
 describe('App.vue', () => {
   let wrapper = null
