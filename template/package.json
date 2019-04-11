@@ -12,7 +12,9 @@
     "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test:watch": "cross-env BABEL_ENV=test karma start test/karma.conf.js --auto-watch",
     "preversion": "git checkout master && git pull && npm run build ",
-    "postversion": "git push && git push --tags "
+    "postversion": "git push && git push --tags ",
+    "new:view": "cross-env TYPE=views node scripts/generateVue/index.js",
+    "new:com": "cross-env TYPE=components node scripts/generateVue/index.js"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
