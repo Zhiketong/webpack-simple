@@ -33,3 +33,33 @@ You can fork this repo to create your own boilerplate, and use it with `vue-cli`
 ``` bash
 vue init username/repo my-project
 ```
+
+### 自动生成组件模板脚本
+
+#### 生成页面组件
+
+``` bash
+npm run new:view
+
+请输入要生成的页面组件名称，会生成在views/目录下
+
+directory/.../view.vue
+正在生成目录...
+正在生成vue文件 view
+生成成功
+exit
+```
+
+##### 生成公共组件
+
+``` bash
+npm run new:com
+
+请输入要生成的页面组件名称，会生成在components/目录下
+
+directory/.../component.vue
+正在生成目录...
+正在生成vue文件 component
+生成成功
+exit
+```
