@@ -10,5 +10,11 @@
       "helpers": true,
       "useESModules": true
     }]
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-3"],
+      "plugins": ["istanbul"]
+    }
+  }
 }

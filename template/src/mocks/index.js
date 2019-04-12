@@ -1,6 +1,6 @@
 import Mock from 'mockjs'
 
-const GATEWAY = 'gateway.com'
+const GATEWAY = process.env.GATEWAY_URL
 
 Mock.mock(`${GATEWAY}/mocks/test`, {
   'user|1-3': [
