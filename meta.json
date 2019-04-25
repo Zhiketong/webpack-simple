@@ -20,24 +20,17 @@
       "label": "License",
       "default": "MIT"
     },
-    "less": {
-       "type": "confirm",
-       "message": "Use less?",
-       "default": false
-    },
-    "vuex": {
+    "business": {
       "type": "confirm",
-      "message": "Use vuex?",
-      "default": false
-    },
-    "mock": {
-      "type": "confirm",
-      "message": "Use mockjs?",
+      "message": "是否生成业务组件，否则生成UI组件?",
       "default": false
     }
   },
   "filters": {
-    "src/mocks/**/*": "mock"
+    "src/mocks/**/*": "business",
+    "src/views/*": "business",
+    "src/store/*": "business",
+    "src/api/*": "business"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }

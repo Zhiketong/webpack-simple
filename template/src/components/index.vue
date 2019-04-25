@@ -1,14 +1,27 @@
 <template lang="html">
-  <div class="component-{{name}}">
+  <div class="{{name}}">
     {{name}}
   </div>
 </template>
 
 <script>
+import demoModule from '@/store/modules/demo'
+
 export default {
-  name: "{{name}}"
+  name: "{{name}}",
+  {{#business}}
+  beforeCreate () {
+    this.$store.registerModule('demo', demoModule)
+  },
+  created () {
+    this.$store.dispatch('demo/testjava')
+  },
+  beforeDestroy () {
+    this.$store.unregisterModule('demo')
+  }
+  {{/business}}
 }
 </script>
 
-<style{{#less}} lang="less"{{/less}} scoped>
+<style lang="less"{{#business}} scoped{{/business}}>
 </style>
