@@ -5,8 +5,9 @@
 </template>
 
 <script>
+{{#business}}
 import demoModule from '@/store/modules/demo'
-
+{{/business}}
 export default {
   name: "{{name}}",
   {{#business}}
