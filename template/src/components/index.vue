@@ -15,7 +15,7 @@ export default {
     this.$store.registerModule('demo', demoModule)
   },
   created () {
-    this.$store.dispatch('demo/testjava')
+    this.$store.dispatch('testjava')
   },
   beforeDestroy () {
     this.$store.unregisterModule('demo')
