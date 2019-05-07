@@ -6,7 +6,33 @@
 
 <script>
 export default {
-  name: "{{name}}"
+  name: "{{name}}",
+  props: {
+    query: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    params: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    search: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    auth: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+  }
 }
 </script>
 
