@@ -9,10 +9,10 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
-    "test:watch": "cross-env BABEL_ENV=test karma start test/karma.conf.js --auto-watch",
+    "test": "jest",
+    "deploy": "",
     "preversion": "git checkout master && git pull && npm run build ",
-    "postversion": "git push && git push --tags ",
+    "postversion": "git push && git push --tags && npm run deploy",
     "new:view": "cross-env TYPE=views node scripts/generateVue/index.js",
     "new:com": "cross-env TYPE=components node scripts/generateVue/index.js"
   },
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^6.26.0",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-istanbul": "^5.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -44,6 +45,8 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
+    "gh-pages": "^2.0.1",
+    "jest": "^24.8.0",
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
@@ -58,9 +61,24 @@
     "mockjs": "^1.0.1-beta3",
     "sinon": "^7.3.0",
     "sinon-chai": "^3.3.0",
+    "vue-jest": "^3.0.4",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
+  },
+  "publishConfig": {
+    "registry": ""
+  }
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "vue-jest"
+    }
   }
 }

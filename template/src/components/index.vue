@@ -1,28 +1,16 @@
-<template lang="html">
-  <div class="{{name}}">
-    {{name}}
+<template>
+  <div class="index">
+    index组件
   </div>
 </template>
 
 <script>
-{{#business}}
-import demoModule from '@/store/modules/demo'
-{{/business}}
-export default {
-  name: "{{name}}",
-  {{#business}}
-  beforeCreate () {
-    this.$store.registerModule('demo', demoModule)
-  },
-  created () {
-    this.$store.dispatch('testjava')
-  },
-  beforeDestroy () {
-    this.$store.unregisterModule('demo')
+  export default {
+    name: 'index'
   }
-  {{/business}}
-}
 </script>
 
-<style lang="less"{{#business}} scoped{{/business}}>
+<style scoped>
+  .index {}
 </style>
+    

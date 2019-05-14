@@ -27,10 +27,7 @@
     }
   },
   "filters": {
-    "src/mocks/**/*": "business",
-    "src/views/**/*": "business",
-    "src/store/**/*": "business",
-    "src/api/*": "business"
+    "src/store/**/*": "business"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }

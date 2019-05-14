@@ -1,23 +1,32 @@
 <template>
-  <div id="app">
-    <Com></Com>
+  <div class="{{name}}">
+    app
   </div>
 </template>
 
 <script>
-import Com from './components/index.vue'
+{{#business}}
+import demoModule from './store/modules/demo'
+{{/business}}
 export default {
-  name: 'app',
-  components: {
-    Com
-  },
+  name: '{{name}}',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
+  },
+  {{#business}}
+  beforeCreate () {
+    this.$store.registerModule('demo', demoModule)
+  },
+  created () {
+    this.$store.dispatch('testjava')
+  },
+  beforeDestroy () {
+    this.$store.unregisterModule('demo')
   }
+  {{/business}}
 }
 </script>
 
-<style{{#less}} lang="less"{{/less}}>
+<style lang="less"{{#business}} scoped{{/business}}>
 </style>

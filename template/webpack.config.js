@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: process.env.NODE_ENV === 'development' ? './src/main.js' : './src/export.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -75,11 +75,13 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
+  module.exports.output.filename = process.env.npm_package_name + '.[name].' + process.env.npm_package_gitHead + '.js'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: '"production"',
+        PACKAGE_NAME: JSON.stringify(process.env.npm_package_name)
       }
     }),
     new webpack.optimize.UglifyJsPlugin({

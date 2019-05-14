@@ -1,20 +1,10 @@
 {
   "presets": [
-    ["env", { "modules": false }],
-    "stage-3"
-  ],
-  "plugins": [
-    ["transform-runtime", {
-      "regenerator": false,
-      "corejs": true,
-      "helpers": true,
-      "useESModules": true
-    }]
+    ["env", { "modules": false }]
   ],
   "env": {
     "test": {
-      "presets": ["env", "stage-3"],
-      "plugins": ["istanbul"]
+      "presets": [["env", { "targets": { "node": "current" } }]]
     }
   }
 }

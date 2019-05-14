@@ -9,7 +9,7 @@ const actions = {
       method: 'post',
       url: 'url',
       params: {}
-    }, {root: true})
+    })
     .then((data) => {
     }) */
     commit('DEMO', 'value')
