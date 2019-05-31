@@ -1,7 +1,10 @@
-const state = {
-  demo: {
+function getInitialState () {
+  return {
+    demo: {}
   }
 }
+
+const state = getInitialState()
 
 const actions = {
   testjava ({dispatch, commit}) {
@@ -17,6 +20,9 @@ const actions = {
 }
 
 const mutations = {
+  UN_REGISTER_MODULE (state) {
+    state = Object.assign(state, getInitialState())
+  },
   DEMO (state, data) {
     state.demo = data
   }

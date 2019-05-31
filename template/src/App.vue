@@ -22,7 +22,8 @@ export default {
     this.$store.dispatch('testjava')
   },
   beforeDestroy () {
-    this.$store.unregisterModule('demo')
+    // this.$store.unregisterModule('demo')
+    this.$store.commit('UN_REGISTER_MODULE')
   }
   {{/business}}
 }
