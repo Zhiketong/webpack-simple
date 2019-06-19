@@ -7,7 +7,7 @@ function getInitialState () {
 const state = getInitialState()
 
 const actions = {
-  testjava ({dispatch, commit}) {
+  fetchApi ({dispatch, commit}) {
     /* dispatch('javaApi', {
       method: 'post',
       url: 'url',
@@ -15,7 +15,7 @@ const actions = {
     })
     .then((data) => {
     }) */
-    commit('DEMO', 'value')
+    commit('UPDATE', 'value')
   }
 }
 
@@ -23,7 +23,7 @@ const mutations = {
   UN_REGISTER_MODULE (state) {
     state = Object.assign(state, getInitialState())
   },
-  DEMO (state, data) {
+  UPDATE (state, data) {
     state.demo = data
   }
 }

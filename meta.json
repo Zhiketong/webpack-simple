@@ -27,7 +27,9 @@
     }
   },
   "filters": {
-    "src/store/**/*": "business"
+    "src/store/**/*": "business",
+    "src/test/*.spec.js": "business",
+    "src/components/*.vue": "business"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
