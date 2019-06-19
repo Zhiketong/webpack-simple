@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import demoModule from '@/store/modules/demo'
+  import demoModule from '../store/modules/demo'
   
   export default {
     name: 'demo',
